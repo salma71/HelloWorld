@@ -14,6 +14,7 @@ public class Main {
 //        sb.toString();
 //        String result = sb.toString();
 //        System.out.println(result);
+
 //        StringBuilder b = new StringBuilder();
 //        Scanner scanner = new Scanner(System.in);
 //
@@ -52,25 +53,40 @@ public class Main {
 //        } else {
 //            System.out.println("they don't match");
 //        }
-        double doubleValue = 1_234_567.89;
-        NumberFormat numberFormat = NumberFormat.getNumberInstance();
-        System.out.println(numberFormat.format(doubleValue));
+//        double doubleValue = 1_234_567.89;
+//        NumberFormat numberFormat = NumberFormat.getNumberInstance();
+//        System.out.println(numberFormat.format(doubleValue));
+//
+//        NumberFormat intFormat = NumberFormat.getIntegerInstance();
+//        System.out.println(intFormat.format(doubleValue)); // the fraction values are gone
+//
+//        numberFormat.setGroupingUsed(false);
+//        System.out.println(numberFormat.format(doubleValue)); // git rid of the commas seperators
+//
+//        Locale locale = new Locale("de", "DE");
+//        NumberFormat localFormat = NumberFormat.getNumberInstance(locale);
+//        System.out.println(localFormat.format(doubleValue)); // will reverse the commas depending on the country
+//
+//        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(locale);
+//        System.out.println(currencyFormat.format(doubleValue)); // will show the currency with the number depends on the country
+//
+//        DecimalFormat df = new DecimalFormat("$##0.00#");
+//        System.out.println(df.format(1));
+//        System.out.println(df.format(5.591)); // this will show the number without zeros
+        StringBuilder c = new StringBuilder();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a numeric value: ");
+        String input1 = sc.nextLine();
+        double d1 = Double.parseDouble(input1);
 
-        NumberFormat intFormat = NumberFormat.getIntegerInstance();
-        System.out.println(intFormat.format(doubleValue)); // the fraction values are gone
+        System.out.print("Enter a numeric value: ");
+        String input2 = sc.nextLine();
+        double d2 = Double.parseDouble(input2);
 
-        numberFormat.setGroupingUsed(false);
-        System.out.println(numberFormat.format(doubleValue)); // git rid of the commas seperators
+        double result = d1 + d2;
 
-        Locale locale = new Locale("de", "DE");
-        NumberFormat localFormat = NumberFormat.getNumberInstance(locale);
-        System.out.println(localFormat.format(doubleValue)); // will reverse the commas depending on the country
+        System.out.println("The answer is " + result);
 
-        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(locale);
-        System.out.println(currencyFormat.format(doubleValue)); // will show the currency with the number depends on the country
 
-        DecimalFormat df = new DecimalFormat("$##0.00#");
-        System.out.println(df.format(1));
-        System.out.println(df.format(5.591)); // this will show the number without zeros
     }
 }
