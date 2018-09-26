@@ -1,5 +1,8 @@
 package com.company.java;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -25,29 +28,49 @@ public class Main {
 //                .append(input2);
 //
 //        System.out.println(b.toString());
-        String s1 = "Hello";
-        String s2 = "Hello";
-        if (s1 == s2) {
-            System.out.println("They match");
-        } else {
-            System.out.println("They don't match");
-        }
-        String s3 = new String("hello");
-        String s4 = new String("HELLO");
-        if (s3 == s4) {
-            System.out.println("they match");
-        } else {
-            System.out.println("they don't match");
-        }
-        if (s3.equals(s4)) {
-            System.out.println("they match");
-        } else {
-            System.out.println("they don't match");
-        }
-        if (s3.equalsIgnoreCase(s4)) {
-            System.out.println("they match");
-        } else {
-            System.out.println("they don't match");
-        }
+//        String s1 = "Hello";
+//        String s2 = "Hello";
+//        if (s1 == s2) {
+//            System.out.println("They match");
+//        } else {
+//            System.out.println("They don't match");
+//        }
+//        String s3 = new String("hello");
+//        String s4 = new String("HELLO");
+//        if (s3 == s4) {
+//            System.out.println("they match");
+//        } else {
+//            System.out.println("they don't match");
+//        }
+//        if (s3.equals(s4)) {
+//            System.out.println("they match");
+//        } else {
+//            System.out.println("they don't match");
+//        }
+//        if (s3.equalsIgnoreCase(s4)) {
+//            System.out.println("they match");
+//        } else {
+//            System.out.println("they don't match");
+//        }
+        double doubleValue = 1_234_567.89;
+        NumberFormat numberFormat = NumberFormat.getNumberInstance();
+        System.out.println(numberFormat.format(doubleValue));
+
+        NumberFormat intFormat = NumberFormat.getIntegerInstance();
+        System.out.println(intFormat.format(doubleValue)); // the fraction values are gone
+
+        numberFormat.setGroupingUsed(false);
+        System.out.println(numberFormat.format(doubleValue)); // git rid of the commas seperators
+
+        Locale locale = new Locale("de", "DE");
+        NumberFormat localFormat = NumberFormat.getNumberInstance(locale);
+        System.out.println(localFormat.format(doubleValue)); // will reverse the commas depending on the country
+
+        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(locale);
+        System.out.println(currencyFormat.format(doubleValue)); // will show the currency with the number depends on the country
+
+        DecimalFormat df = new DecimalFormat("$##0.00#");
+        System.out.println(df.format(1));
+        System.out.println(df.format(5.591)); // this will show the number without zeros
     }
 }
