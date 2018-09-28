@@ -73,20 +73,34 @@ public class Main {
 //        DecimalFormat df = new DecimalFormat("$##0.00#");
 //        System.out.println(df.format(1));
 //        System.out.println(df.format(5.591)); // this will show the number without zeros
-        StringBuilder c = new StringBuilder();
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a numeric value: ");
-        String input1 = sc.nextLine();
-        double d1 = Double.parseDouble(input1);
+//        StringBuilder c = new StringBuilder();
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter a numeric value: ");
+//        String input1 = sc.nextLine();
+//        double d1 = Double.parseDouble(input1);
+//
+//        System.out.print("Enter a numeric value: ");
+//        String input2 = sc.nextLine();
+//        double d2 = Double.parseDouble(input2);
+//
+//        double result = d1 + d2;
+//
+//        System.out.println("The answer is " + result);
+        try {
+            String welcome = "Welcome!";
+            char[] chars = welcome.toCharArray();
+            char lastChar = chars[chars.length - 1];
+            System.out.println("last char is: " + lastChar);
 
-        System.out.print("Enter a numeric value: ");
-        String input2 = sc.nextLine();
-        double d2 = Double.parseDouble(input2);
+            String nothing = null;
+            System.out.println(nothing);
 
-        double result = d1 + d2;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return; // to stop the program here
+        }
 
-        System.out.println("The answer is " + result);
-
+        System.out.println("code can run successfully");
 
     }
 }
