@@ -8,6 +8,12 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        String input = InputHelper.getInput("Enter value 1: ");
+        System.out.println("you entered this value: ");
+        input = InputHelper.getInput("enter value 2: ");
+        System.out.println("you entered: " + input);
+    }
+}
 	// write your code here
 //        StringBuilder sb = new StringBuilder("Wlcomre");
 //        sb.append("to salma");
@@ -86,29 +92,44 @@ public class Main {
 //        double result = d1 + d2;
 //
 //        System.out.println("The answer is " + result);
-        try {
-            String welcome = "Welcome!";
-            char[] chars = welcome.toCharArray();
-            char lastChar = chars[chars.length - 1];
-            System.out.println("last char is: " + lastChar);
-
-            String nothing = null;
-            System.out.println(nothing.length());
-
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Array Exception error");
-            e.printStackTrace();
-
-            return; // to stop the program here
-        } catch (NullPointerException e){
-            System.out.println("Null exception error");
-            e.printStackTrace();
-
-        } catch (Exception e) {
-            System.out.println("Any exception");
-
-        }
-        System.out.println("code can run successfully");
-
-    }
-}
+//        try {
+//            String welcome = "Welcome!";
+//            char[] chars = welcome.toCharArray();
+//            char lastChar = chars[chars.length - 1];
+//            System.out.println("last char is: " + lastChar);
+//
+//            String nothing = null;
+//            System.out.println(nothing);
+//
+//        } catch (ArrayIndexOutOfBoundsException e) {
+//            System.out.println("Array Exception error");
+//            e.printStackTrace();
+//
+//            return; // to stop the program here
+//        } catch (NullPointerException e){
+//            System.out.println("Null exception error");
+//            e.printStackTrace();
+//
+//        } catch (Exception e) {
+//            System.out.println("Any exception");
+//
+//        }
+//
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        try {
+//            doSomeThing();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println("code can run successfully");
+//
+//    }
+//
+//    public static void doSomeThing() throws InterruptedException {
+//        Thread.sleep(1000);
+//    }
+//}
