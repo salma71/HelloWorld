@@ -93,13 +93,21 @@ public class Main {
             System.out.println("last char is: " + lastChar);
 
             String nothing = null;
-            System.out.println(nothing);
+            System.out.println(nothing.length());
+
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array Exception error");
+            e.printStackTrace();
+
+            return; // to stop the program here
+        } catch (NullPointerException e){
+            System.out.println("Null exception error");
+            e.printStackTrace();
 
         } catch (Exception e) {
-            e.printStackTrace();
-            return; // to stop the program here
-        }
+            System.out.println("Any exception");
 
+        }
         System.out.println("code can run successfully");
 
     }
